@@ -1,0 +1,22 @@
+.buttonClass {
+    width: 200px;
+    margin: 0 20px 0 20px;
+    background-color: rgba( 44, 130, 201, 1 );
+    border-radius: 3px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonClass:hover {
+    background-color: rgba( 37, 116, 169, 1 );
+}
+
+.buttonClass:active {
+    background-color: rgba( 52, 152, 219, 1 );
+}
+
+h1 {
+    margin: 5px;
+    padding: 0;
+}

@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Head from "./head/Head";
+import PairBar from "./graphs/PairBar";
 
 function App() {
+
+  const [pairToShow, setPairToShow] = useState();
+  const [pairValues, setPairValues] = useState();
+  const [timePeriodToShow, setTimePeriodToShow] = useState();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Head getPairToShow={setPairToShow} getPairValuesToShow={setPairValues} getTimePeriod={setTimePeriodToShow}/>
+      { !pairValues ? "": <PairBar currentPair={pairToShow} currentPairValues={pairValues} timePeriod={timePeriodToShow}/> }
     </div>
   );
 }
